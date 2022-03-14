@@ -60,12 +60,12 @@ namespace River.OneMoreAddIn.Commands.Search
 
 		private void SearchOnKeydown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Enter &&
-				findBox.Text.Trim().Length > 0)
-			{
-				Search(sender, e);
-			}
-		}
+            if (e.KeyCode == Keys.Enter &&
+                findBox.Text.Trim().Length > 0)
+            {
+                Search(sender, e);
+            }
+        }
 
 
 		private void Search(object sender, EventArgs e)
@@ -145,5 +145,5 @@ namespace River.OneMoreAddIn.Commands.Search
 			DialogResult = DialogResult.Cancel;
 			Close();
 		}
-	}
+    }
 }

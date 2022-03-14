@@ -400,6 +400,12 @@ namespace River.OneMoreAddIn
 		public async Task RemoveInkCmd(IRibbonControl control)
 			=> await factory.Run<RemoveInkCommand>();
 
+
+		public async Task ShowParentsCmd(IRibbonControl control)
+		=> await factory.Run<ShowParentsCommand>();
+
+
+
 		public async Task RemovePageNumbersCmd(IRibbonControl control)
 			=> await factory.Run<RemovePageNumbersCommand>();
 

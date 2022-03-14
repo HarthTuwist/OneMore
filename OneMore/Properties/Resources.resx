@@ -3880,4 +3880,8 @@ Any</value>
     <value>Paste and Keep Text Only (Ctrl + Shift + V)</value>
     <comment>ribbon item</comment>
   </data>
+  <data name="ribShowParentsButton_Label" xml:space="preserve">
+    <value>Find Zettel Parents</value>
+    <comment>ribbon item</comment>
+  </data>
 </root>

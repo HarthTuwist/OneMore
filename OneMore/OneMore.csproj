@@ -145,6 +145,7 @@
     <Compile Include="Colorizer\Parser.cs" />
     <Compile Include="Colorizer\Provider.cs" />
     <Compile Include="Colorizer\Theme.cs" />
+    <Compile Include="Commands\Clean\ShowParentsCommand.cs" />
     <Compile Include="Commands\Clean\RemoveInkCommand.cs" />
     <Compile Include="Commands\Clean\RemoveTagsCommand.cs" />
     <Compile Include="Commands\CommandService.cs" />
@@ -413,6 +414,12 @@
     <Compile Include="Commands\Tools\UpdateDialog.Designer.cs">
       <DependentUpon>UpdateDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Commands\Zettelkasten\ParentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\Zettelkasten\ParentDialog.Designer.cs">
+      <DependentUpon>ParentDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ApplicationFactory.cs" />
     <Compile Include="Helpers\ErrorCodes.cs" />
     <Compile Include="Helpers\Extensions\ByteExtensions.cs" />
@@ -445,6 +452,7 @@
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\TagDef.cs" />
     <Compile Include="Models\TagDefMapping.cs" />
+    <Compile Include="ParentSearcher.cs" />
     <Compile Include="Styles\StyleProperties.cs" />
     <Compile Include="Styles\Theme.cs" />
     <Compile Include="Styles\ThemeProvider.cs" />
@@ -1112,7 +1120,12 @@
     <EmbeddedResource Include="Commands\Tools\UpdateDialog.resx">
       <DependentUpon>UpdateDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
+    <EmbeddedResource Include="Commands\Zettelkasten\ParentDialog.resx">
+      <DependentUpon>ParentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pl-PL.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MoreLinkLabel.resx">
       <DependentUpon>MoreLinkLabel.cs</DependentUpon>
     </EmbeddedResource>

@@ -109,6 +109,78 @@ namespace River.OneMoreAddIn.UI
 			}
 		}
 
+
+
+
+
+
+
+
+		//public void PopulateWithParentCheck(XElement results, XNamespace ns)
+		//{
+		//	BeginUpdate();
+
+		//	DisplayResultsWithParentCheck(results, ns, Nodes);
+
+		//	if (Nodes.Count > 0)
+		//	{
+		//		ExpandAll();
+		//		Nodes[0].EnsureVisible();
+		//	}
+
+		//	EndUpdate();
+		//}
+
+
+		//private void DisplayResultsWithParentCheck(XElement root, XNamespace ns, TreeNodeCollection nodes)
+		//{
+		//	TreeNode node;
+
+		//	if (root.Name.LocalName == "Page")
+		//	{
+		//		Page adf = one.GetPage(root.Attribute("ID");
+
+		//		if ()
+  //              {
+  //                  node = new HierarchyNode(root.Attribute("name").Value, root)
+  //                  {
+  //                      Hyperlinked = true
+  //                  };
+
+  //                  nodes.Add(node); 
+  //              }
+
+		//		return;
+		//	}
+
+		//	if (root.Name.LocalName == "Notebooks")
+		//	{
+		//		foreach (var element in root.Elements())
+		//		{
+		//			DisplayResults(element, ns, nodes);
+		//		}
+		//		return;
+		//	}
+
+		//	node = new HierarchyNode(root.Attribute("name")?.Value, root);
+		//	nodes.Add(node);
+
+		//	foreach (var element in root.Elements())
+		//	{
+		//		DisplayResults(element, ns, node.Nodes);
+		//	}
+		//}
+
+
+
+
+
+
+
+
+
+
+
 		#region Results XML
 		/*
 		<one:Notebooks xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote">

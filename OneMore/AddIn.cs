@@ -21,6 +21,10 @@ namespace River.OneMoreAddIn
 	using System.Threading.Tasks;
 
 
+	//Zettelkasten Addition
+	using System.Timers;
+
+
 	/// <summary>
 	/// This is the OneNote addin component for OneMore functionality
 	/// </summary>
@@ -183,6 +187,7 @@ namespace River.OneMoreAddIn
 		}
 
 
+		private Timer aTimer;
 		private async Task SetGeneralOptions()
 		{
 			var provider = new SettingsProvider();
@@ -199,18 +204,43 @@ namespace River.OneMoreAddIn
 				{
 					logger.WriteLine("error checking for updates", exc);
 				}
+
 			}
-		}
+
+			//Zettelkasten Addition
+			// Create a timer with a two second interval.
+			aTimer = new System.Timers.Timer(400);
+			// Hook up the Elapsed event for the timer. 
+			aTimer.Elapsed += OnTimedEvent;
+			aTimer.AutoReset = true;
+			aTimer.Enabled = true;
+			LocalParentSearcher = new ParentSearcher();
+    }
+
+		///Zettelkasten Addition
+		public ParentSearcher LocalParentSearcher;
+	private void OnTimedEvent(Object source, ElapsedEventArgs e)
+	{
+            //this is were regular updates we need to do go
+
+            
+			//do not actually do this, as this code does not work yet
+			//LocalParentSearcher.CheckIfParentRefreshNeeded();
 
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-		// Shutdown functions are called in this order:
-		//
-		// 1. OnBeginShutdown
-		// 2. OnDisconnection
+		//Console.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",
+		//				  e.SignalTime);
+	}
 
-		public void OnBeginShutdown(ref Array custom)
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	// Shutdown functions are called in this order:
+	//
+	// 1. OnBeginShutdown
+	// 2. OnDisconnection
+
+	public void OnBeginShutdown(ref Array custom)
 		{
 			var cude = DescribeCustom(custom);
 			logger.Start($"OnBeginShutdown(custom[{cude}])");

@@ -6328,6 +6328,15 @@ namespace River.OneMoreAddIn.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Find Zettel Parents.
+        /// </summary>
+        internal static string ribShowParentsButton_Label {
+            get {
+                return ResourceManager.GetString("ribShowParentsButton_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show XML.
         /// </summary>
         internal static string ribShowXmlButton_Label {
